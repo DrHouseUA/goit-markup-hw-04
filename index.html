@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEBSTUDIO</title>
 
-    <!--Conected Releway,Roboto font-->
+    <!-- #region Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!--Conected normalize style-->
+    <!--Conected normalizer -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -21,36 +20,66 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- #endregion -->
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- #region Header -->
     <header class="header-section">
       <div class="container">
         <nav class="menu">
-          <a class="link-logo logo-header" href="./index.html"
+          <a
+            class="link-logo logo-header"
+            href="./index.html"
+            aria-label="link on logo to Main page"
             >Web<span class="logo-studio">Studio</span></a
           >
           <ul class="nav-link-list">
             <li>
-              <a href="./index.html" target="_blank" class="nav-link">Studio</a>
+              <a
+                href="./index.html"
+                target="_blank"
+                class="nav-link"
+                aria-label="link to Studio"
+                >Studio</a
+              >
             </li>
             <li>
-              <a href="" target="_blank" class="nav-link">Portfolio</a>
+              <a
+                href=""
+                target="_blank"
+                class="nav-link"
+                aria-label="link to Portfolio"
+                >Portfolio</a
+              >
             </li>
             <li>
-              <a href="" target="_blank" class="nav-link">Contacts</a>
+              <a
+                href=""
+                target="_blank"
+                class="nav-link"
+                aria-label="link to Contacts"
+                >Contacts</a
+              >
             </li>
           </ul>
         </nav>
         <address class="contacts-links">
           <ul class="address-list">
             <li>
-              <a class="contacts-link" href="mailto:info@devstudio.com"
+              <a
+                class="contacts-link"
+                href="mailto:info@devstudio.com"
+                aria-label="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="contacts-link" href="tel:+110001111111"
+              <a
+                class="contacts-link"
+                href="tel:+110001111111"
+                aria-label="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -58,43 +87,50 @@
         </address>
       </div>
     </header>
+    <!-- #endregion -->
+
+    <!-- #region Main -->
 
     <main>
+      <!-- #region Greeting -->
       <section class="greeting-section">
         <div class="container">
-          <h1 class="main-header">Effective Solutions for Your Business</h1>
-          <button class="main-button" type="button">Order Service</button>
+          <h1 class="greeting-header">Effective Solutions for Your Business</h1>
+          <button class="greeting-button" type="button">Order Service</button>
         </div>
       </section>
+      <!-- #endregion -->
 
-      <section class="company-skills">
+      <!-- #region Benefits -->
+
+      <section class="benefits">
         <div class="container">
-          <h2 class="skill-header visually-hidden">Our skills</h2>
-          <ul class="company-skills-list">
-            <li class="company-skills-item">
-              <h3 class="company-skills-headers">Strategy</h3>
-              <p class="section-text">
+          <h2 class="benefits-main-header visually-hidden">Our skills</h2>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <h3 class="benefits-headers">Strategy</h3>
+              <p class="benefits-item-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="company-skills-item">
-              <h3 class="company-skills-headers">Punctuality</h3>
-              <p class="section-text">
+            <li class="benefits-item">
+              <h3 class="benefits-headers">Punctuality</h3>
+              <p class="benefits-item-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
-            <li class="company-skills-item">
-              <h3 class="company-skills-headers">Diligence</h3>
-              <p class="section-text">
+            <li class="benefits-item">
+              <h3 class="benefits-headers">Diligence</h3>
+              <p class="benefits-item-text">
                 Research and confirm brands with the strongest digital growth
                 opportunities and minimize risk.
               </p>
             </li>
-            <li class="company-skills-item">
-              <h3 class="company-skills-headers">Technologies</h3>
-              <p class="section-text">
+            <li class="benefits-item">
+              <h3 class="benefits-headers">Technologies</h3>
+              <p class="benefits-item-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -102,46 +138,50 @@
           </ul>
         </div>
       </section>
+      <!-- #endregion -->
 
+      <!-- #region Team -->
       <section class="team">
         <div class="container">
-          <h2 class="team-headers-style">Our Team</h2>
+          <h2 class="team-header">Our Team</h2>
           <ul class="team-list">
             <li class="team-card">
               <img src="./images/img-3.jpg" alt="first member image" />
-              <div class="card-description">
-                <h3 class="subheaders-style">Mark Guerrero</h3>
-                <p class="section-text">Product Designer</p>
+              <div class="team-description">
+                <h3 class="team-card-name">Mark Guerrero</h3>
+                <p class="team-card-role">Product Designer</p>
               </div>
             </li>
             <li class="team-card">
               <img src="./images/img-2.jpg" alt="second member  image" />
-              <div class="card-description">
-                <h3 class="subheaders-style">Tom Ford</h3>
-                <p class="section-text">Frontend Developer</p>
+              <div class="team-description">
+                <h3 class="team-card-name">Tom Ford</h3>
+                <p class="team-card-role">Frontend Developer</p>
               </div>
             </li>
             <li class="team-card">
               <img src="./images/img-1.jpg" alt="third member image" />
-              <div class="card-description">
-                <h3 class="subheaders-style">Camila Garcia</h3>
-                <p class="section-text">Marketing</p>
+              <div class="team-description">
+                <h3 class="team-card-name">Camila Garcia</h3>
+                <p class="team-card-role">Marketing</p>
               </div>
             </li>
             <li class="team-card">
               <img src="./images/img-0.jpg" alt="fourth member image" />
-              <div class="card-description">
-                <h3 class="subheaders-style">Daniel Wilson</h3>
-                <p class="section-text">UI Designer</p>
+              <div class="team-description">
+                <h3 class="team-card-name">Daniel Wilson</h3>
+                <p class="team-card-role">UI Designer</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
+      <!-- #endregion -->
 
+      <!-- #region Portfolio -->
       <section class="portfolio">
         <div class="container">
-          <h2 class="portfolio-headers-style">Our Portfolio</h2>
+          <h2 class="portfolio-header">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <img
@@ -151,7 +191,7 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Banking App</h3>
+                <h3 class="Portfolio-card-name">Banking App</h3>
                 <p class="section-text">App</p>
               </div>
             </li>
@@ -163,8 +203,8 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Cashless Payment</h3>
-                <p class="section-text">Marketing</p>
+                <h3 class="Portfolio-card-name">Cashless Payment</h3>
+                <p class="Portfolio-card-text">Marketing</p>
               </div>
             </li>
             <li class="portfolio-item">
@@ -175,8 +215,8 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Meditation App</h3>
-                <p class="section-text">App</p>
+                <h3 class="Portfolio-card-name">Meditation App</h3>
+                <p class="Portfolio-card-text">App</p>
               </div>
             </li>
             <li class="portfolio-item">
@@ -187,8 +227,8 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Taxi Service</h3>
-                <p class="section-text">Marketing</p>
+                <h3 class="Portfolio-card-name">Taxi Service</h3>
+                <p class="Portfolio-card-text">Marketing</p>
               </div>
             </li>
             <li class="portfolio-item">
@@ -199,8 +239,8 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Screen Illustrations</h3>
-                <p class="section-text">Design</p>
+                <h3 class="Portfolio-card-name">Screen Illustrations</h3>
+                <p class="Portfolio-card-text">Design</p>
               </div>
             </li>
             <li class="portfolio-item">
@@ -211,18 +251,21 @@
                 width="360"
               />
               <div class="portfolio-text">
-                <h3 class="subheaders-style">Online Courses</h3>
-                <p class="section-text">Marketing</p>
+                <h3 class="Portfolio-card-name">Online Courses</h3>
+                <p class="Portfolio-card-text">Marketing</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
+      <!-- #endregion -->
     </main>
+    <!-- #endregion -->
 
+    <!-- #region Footer -->
     <footer class="basement">
       <div class="container">
-        <a href="#" class="footer-link"
+        <a href="#" class="basement-link" aria-label="link to main page"
           >Web<span class="logo-studio">Studio</span></a
         >
         <p class="basement-text">
@@ -231,5 +274,6 @@
         </p>
       </div>
     </footer>
+    <!-- #endregion -->
   </body>
 </html>
