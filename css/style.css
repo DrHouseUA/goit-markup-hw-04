@@ -58,6 +58,9 @@ body{
 .header-section {
   border-bottom: solid 1px #e7e9fc;
   align-items: center;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
 
 .header-section .container {
@@ -165,6 +168,15 @@ address {
 
 /* #region Greeting */
 
+.greeting-section {
+  max-width: 1440px;
+  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-optimized.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
 .greeting-section .container {
   width: 100%;
   padding-top: 188px;
@@ -175,10 +187,7 @@ address {
   gap: 48px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to bottom,rgba(46, 47, 66, 0.5),rgba(46, 47, 66, 0.5)), url(../images/people-office-optimized.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
 }
 
 .greeting-header {
@@ -204,7 +213,7 @@ address {
   letter-spacing: 0.04em;
   line-height: 1.5;
   cursor: pointer;
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .greeting-button:hover,
@@ -357,8 +366,7 @@ address {
   transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icons-wrapper:hover,
-.team-icons-wrapper:focus {
+.team-icons-wrapper:hover {
   background-color: #404BBF;
 }
 
@@ -538,5 +546,5 @@ address {
 .basement-link:hover {
 color: #404bbf;
 }
-    
+  
 /* #endregion */
