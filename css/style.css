@@ -1,3 +1,5 @@
+/* #region Basic reset */
+
 h1,
 h2,
 h3,
@@ -25,7 +27,7 @@ ol {
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -35,13 +37,17 @@ ol {
   position: absolute;
 }
 
+/* #endregion */
+
+/* #region Basic set */
+
 img {
   display: block;
   width: 264px;
   height: 260px;
 }
 
-body{
+body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #FFFFFF;
@@ -53,6 +59,8 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* #endregion */
 
 /* #region Header */
 .header-section {
@@ -124,7 +132,11 @@ body{
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav-item:first-child {
+  color: #404bbf;
 }
 
 .contacts-link {
@@ -133,11 +145,13 @@ body{
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link-active .nav-link {
+.header-link-active {
+  position: relative;
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-active::after {
@@ -145,11 +159,11 @@ body{
   position: absolute;
   top: 96%;
   right: 0%;
+  bottom: -1px;
   border-radius: 2px;
   width: 100%;
   height: 4px;
   background-color: #404BBF;
-  color: #404BBF;
 }
 
 address {
@@ -163,6 +177,7 @@ address {
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion */
 
@@ -246,6 +261,7 @@ address {
 }
 
 .benefits-wrapper {
+  height: 112px;
   display: flex;
   align-items:center ;
   justify-content: center;
@@ -315,7 +331,7 @@ address {
   flex-direction: column;
   gap: 8px;
   align-items: center;
-  padding: 32px 16px;
+  padding: 32px 0px;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
 }
@@ -354,25 +370,24 @@ address {
   gap: 24px;
 }
 
-.team-icons-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
+.team-socials-item {
   width: 40px;
   height: 40px;
-  background-color: #4D5AE5;
-  border-radius: 50%;
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-icons-wrapper:hover {
-  background-color: #404BBF;
 }
 
 .team-socials-links {
-  display: block;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d5ae5;
+}
+
+.team-socials-links:hover,
+.team-socials-links:focus {
+  background-color: #404BBF;
 }
 
 .team-socials-icons {
@@ -394,9 +409,12 @@ address {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.portfolio-img-wrapper {
   position: relative;
   overflow: hidden;
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-overlay {
@@ -411,14 +429,23 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-item-overlay {
-  transform: translatey(0);
+.portfolio-item:hover .portfolio-overlay-text {
+  transform: translatey(0%);
 }
 
 .portfolio-overlay-text {
-  line-height: 150%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  color: white;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4D5AE5;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -490,11 +517,12 @@ address {
 
 .basement .container{
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
 
 .basement-logo {
   width: 264px;
+  margin-right: 120px;
 }
 
 .basement-link {
@@ -522,29 +550,55 @@ address {
   letter-spacing: 0.02em;
 }
 
+.basement-link:hover {
+  color: #404bbf;
+}
+
 .footer a {
   display: inline-block;
 }
 
 .basement-socials-caption {
   font-weight: 500;
-  line-height: 150%;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  color:#FFFFFF;
+}
+
+.basement-socials-list {
+  display: flex;
+  gap: 16px;
+}
+
+.basement-socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.basement-socials-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
 }
 
 .basement-icons-wrapper {
   padding: 8px;
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.basement-icons-wrapper:hover,
-.basement-icons-wrapper:focus {
+.basement-socials-links:hover,
+.basement-socials-links:focus {
   background-color: #31D0AA;
 }
 
-.basement-link:hover {
-color: #404bbf;
+.basement-socials-icons {
+  fill: #f4f4fd;
 }
-  
+
 /* #endregion */
